@@ -17,9 +17,15 @@ Sistema de monitoramento para acompanhar a **disponibilidade de aplicações e s
   - **Validação de Porta (TCP/UDP):** Checa se as portas estão abertas.
   - **Abertura da Aplicação:** Testa se a aplicação está acessível (sem validação de erros).
 
+  ![Tela Principal](https://img001.prntscr.com/file/img001/stxeOhUxQEO7XTak3H_jFA.png)
+
 - 📈 **Gráficos em Tempo Real**
 
   - Visualização contínua do status das aplicações monitoradas.
+
+![Dashboard Ativo](https://img001.prntscr.com/file/img001/VMvuzmCUQim71_-PbttoFg.png)
+
+![Dashboard Ativo_2](https://img001.prntscr.com/file/img001/lt-pKWpBTBmoBlqjgT4dSA.png)
 
 - ➕ **Cadastro de Aplicações**
 
@@ -27,6 +33,8 @@ Sistema de monitoramento para acompanhar a **disponibilidade de aplicações e s
 
 - 🤖 **Notificações Automatizadas**
   - Envio de alertas via **WhatsApp** em caso de falha detectada.
+
+![Whatsapp](https://img001.prntscr.com/file/img001/7AhDxF6WQY2rDCuI8SAJHw.png)
 
 ---
 
