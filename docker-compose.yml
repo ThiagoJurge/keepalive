@@ -1,0 +1,81 @@
+version: '3.9'
+
+services:
+  backend:
+    build: ./backend
+    container_name: painel_backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app
+    env_file:
+      - .env
+    environment:
+      - TZ=America/Sao_Paulo
+    restart: always
+    depends_on:
+      - db
+
+  redis:
+    image: redis
+    container_name: painel_redis
+    ports:
+      - "6379:6379"
+
+  celery_worker:
+    build: ./backend
+    container_name: painel_celery_worker
+    command: celery -A celery_worker.celery worker --loglevel=info
+    volumes:
+      - ./backend:/app
+    env_file:
+      - .env
+    environment:
+      - TZ=America/Sao_Paulo
+    depends_on:
+      - redis
+      - db
+
+  scheduler:
+    build: ./backend
+    container_name: painel_scheduler
+    command: python scheduler.py
+    volumes:
+      - ./backend:/app
+    env_file:
+      - .env
+    environment:
+      - TZ=America/Sao_Paulo
+    depends_on:
+      - redis
+      - db
+
+  db:
+    image: postgres:15
+    container_name: painel_db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=painel_db
+      - TZ=America/Sao_Paulo
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    restart: always
+
+  bot:
+    build: ./bot
+    container_name: painel_bot
+    working_dir: /app
+    command: npm start
+    volumes:
+      - ./bot:/app
+    ports:
+      - "3001:3001"
+    environment:
+      - TZ=America/Sao_Paulo
+    restart: always
+
+volumes:
+  db_data:
