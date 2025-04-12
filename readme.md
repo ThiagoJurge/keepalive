@@ -1,49 +1,64 @@
-# 🚧 KeepAlive (Em Desenvolvimento)
+# 🚧 KeepAlive – Monitoramento em Tempo Real (Em Desenvolvimento)
 
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
-![License](https://img.shields.io/badge/license-MIT-blue)
+![Status](https://img.shields.io/badge/status-Em%20Desenvolvimento-yellow)
 
-> Projeto em estágio inicial de desenvolvimento — funcionalidades estão sendo testadas e aprimoradas continuamente.
+> ⚠️ Projeto em estágio inicial. As funcionalidades estão em constante evolução e melhorias estão sendo aplicadas regularmente.
 
-Sistema de monitoramento para acompanhar a **disponibilidade de aplicações e serviços** em tempo real. Ideal para ambientes de produção que exigem alta disponibilidade e notificações proativas em caso de falhas.
+**KeepAlive** é um sistema de monitoramento contínuo voltado para verificar a **disponibilidade de aplicações e serviços** em tempo real. Ideal para ambientes que exigem alta confiabilidade e resposta imediata em caso de falhas.
 
 ---
 
 ## 🔍 Funcionalidades
 
-- ✅ **Verificações de Disponibilidade**
+### ✅ Verificações de Disponibilidade
+- **Ping (ICMP):** Verifica a resposta do host.
+- **Validação de Portas (TCP/UDP):** Confirma se as portas estão acessíveis.
+- **Teste de Abertura de Aplicações:** Checa se a aplicação está no ar (sem validação de erros HTTP).
 
-  - **ICMP (Ping):** Verifica resposta do host.
-  - **Validação de Porta (TCP/UDP):** Checa se as portas estão abertas.
-  - **Abertura da Aplicação:** Testa se a aplicação está acessível (sem validação de erros).
+<p align="center">
+  <img src="https://img001.prntscr.com/file/img001/stxeOhUxQEO7XTak3H_jFA.png" alt="Tela Principal" width="600"/>
+</p>
 
-  ![Tela Principal](https://img001.prntscr.com/file/img001/stxeOhUxQEO7XTak3H_jFA.png)
+---
 
-- 📈 **Gráficos em Tempo Real**
+### 📈 Dashboard em Tempo Real
+- Visualização gráfica e contínua da saúde das aplicações monitoradas.
 
-  - Visualização contínua do status das aplicações monitoradas.
+<p align="center">
+  <img src="https://img001.prntscr.com/file/img001/VMvuzmCUQim71_-PbttoFg.png" alt="Dashboard" width="400"/>
+  <img src="https://img001.prntscr.com/file/img001/lt-pKWpBTBmoBlqjgT4dSA.png" alt="Dashboard 2" width="400"/>
+</p>
 
-![Dashboard Ativo](https://img001.prntscr.com/file/img001/VMvuzmCUQim71_-PbttoFg.png)
+---
 
-![Dashboard Ativo_2](https://img001.prntscr.com/file/img001/lt-pKWpBTBmoBlqjgT4dSA.png)
+### ➕ Cadastro de Aplicações
+- Interface simples e intuitiva para adicionar novas aplicações ao monitoramento.
 
-- ➕ **Cadastro de Aplicações**
+---
 
-  - Interface para adicionar novas aplicações à lista de monitoramento.
+### 🤖 Notificações Inteligentes
+- **Alertas automáticos via WhatsApp** sempre que uma falha for detectada.
 
-- 🤖 **Notificações Automatizadas**
-  - Envio de alertas via **WhatsApp** em caso de falha detectada.
-
-![Whatsapp](https://img001.prntscr.com/file/img001/7AhDxF6WQY2rDCuI8SAJHw.png)
+<p align="center">
+  <img src="https://img001.prntscr.com/file/img001/7AhDxF6WQY2rDCuI8SAJHw.png" alt="Alerta WhatsApp" width="300"/>
+</p>
 
 ---
 
 ## ⚙️ Tecnologias Utilizadas
 
-| Camada          | Tecnologia                                                                                    |
-| --------------- | --------------------------------------------------------------------------------------------- |
-| Backend         | ![Python](https://img.shields.io/badge/Python-Flask-blue?logo=python)                         |
-| Frontend        | ![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js)                           |
-| Bot             | ![Node.js](https://img.shields.io/badge/Node.js-JavaScript-brightgreen?logo=node.js)          |
-| Containerização | ![Docker](https://img.shields.io/badge/Docker-blue?logo=docker)                               |
-| Banco de Dados  | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=white) |
+| Camada            | Tecnologia                                                                                     |
+|-------------------|------------------------------------------------------------------------------------------------|
+| Backend           | ![Python](https://img.shields.io/badge/Python-Flask-blue?logo=python)                          |
+| Frontend          | ![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js)                            |
+| Bot de Notificação| ![Node.js](https://img.shields.io/badge/Node.js-JavaScript-brightgreen?logo=node.js)           |
+| Containerização   | ![Docker](https://img.shields.io/badge/Docker-blue?logo=docker)                                |
+| Banco de Dados    | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=white)  |
+
+---
+
+## 📌 Próximos Passos
+
+- [ ] Autenticação de usuários
+- [ ] Integrações com outras plataformas de mensagens (e-mail, Telegram, etc.)
+- [ ] Exportação de relatórios
