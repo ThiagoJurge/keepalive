@@ -47,7 +47,3 @@ Sistema de monitoramento para acompanhar a **disponibilidade de aplicações e s
 | Bot             | ![Node.js](https://img.shields.io/badge/Node.js-JavaScript-brightgreen?logo=node.js)          |
 | Containerização | ![Docker](https://img.shields.io/badge/Docker-blue?logo=docker)                               |
 | Banco de Dados  | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=white) |
-
----
-
-Se quiser, posso seguir com a parte de instalação e execução agora 😉 Quer?
